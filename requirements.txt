@@ -1,0 +1,4 @@
+streamlit
+langchain == 0.0.274
+langchain-experimental == 0.0.16
+openai
