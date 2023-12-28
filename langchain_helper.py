@@ -9,7 +9,7 @@ from langchain.agents.agent_toolkits import SQLDatabaseToolkit
 #conncetion to the database , change the password,user and db_name accordingly
 db = SQLDatabase.from_uri(f"mysql+pymysql://root:password@localhost/db_name")
 
-os.environ["OPENAI_API_KEY"] = ""
+os.environ["OPENAI_API_KEY"] = "your key"
 
 llm = ChatOpenAI(model_name="gpt-3.5-turbo")
 
