@@ -1,4 +1,4 @@
-from langchain_helper import get_answer
+from langchain_final import get_answer
 import streamlit as st
 
 st.set_page_config(
@@ -16,10 +16,11 @@ with st.sidebar:
     st.success('👉 Enter your question in the input box on the left and click Enter.')
 
 question = st.text_input("Ask a Question:", "")
+button_pressed = st.button("Get Answer", key="get_answer_button")
 
-if question:
-    answer = get_answer(question)
-    
-    st.write('---')
-    st.subheader("Answer:")
-    st.info(answer)
+if button_pressed:
+    if question:
+        answer = get_answer(question)
+        st.subheader("Answer:")
+        st.info(answer)
+
